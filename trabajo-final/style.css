@@ -1,0 +1,318 @@
+:root{
+    --green: hsl(162, 45%, 56%);
+    --plomo: hsl(162, 2%, 56%);
+    --blue: hsl(220, 85%, 57%);
+    --violet: hsl(272, 92%, 32%); 
+    --tex-white:hsl(0, 0%, 100%);
+    --text-light-gray: hsl(0, 0%, 90%);
+    --body-bg-color: hsl(200, 54%, 12%);
+    --glass-bg-color: hsla(0, 0%, 100%, 0.05);
+    --boder-color: hsla(0, 0%, 100%, 0.25);
+    --blur: blur(10px);
+    --button-hover-color: ☐hsla(0, 0%, 0%, 0.3);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h3{
+    text-align: center;
+
+}
+
+body{
+    background-color: var(--body-bg-color);
+    color: var(--text-light-gray);
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 0.5;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+body::after,
+body::before{
+    content: '';
+    position: fixed;
+    height: 4000px;
+    width: 400px;
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(150px);
+    opacity: 0.5;
+}
+body::before{
+    background-color: var(--green);
+    left: 0;
+    bottom: 0;
+    transform: translate(-50%);
+}
+
+.form-main{
+    min-height: 100vh;
+    padding: 60px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-content .box{
+    border-color: var(--glass-bg-color);
+    border: 1px solid var(--boder-color);
+    padding: 40px 50px;
+    border-radius: 20px;
+    backdrop-filter: var(--blur);
+}
+
+.slider-frame{
+    width: 500px;
+    height: auto;
+	margin:50px auto 0;
+	overflow: hidden;
+}
+
+.slider-frame ul{
+    display: flex;
+	padding: 0;
+	width: 400%;
+	
+	animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-frame li{
+    width: 100%;
+	list-style: none;
+}
+
+.slider-frame img{
+    width: 100%;
+}
+
+@keyframes slide {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+
+button{
+    cursor: pointer;
+}
+
+#button{
+
+    background-color: #000;
+}
+
+button white-button{
+
+    background-color: #fff;
+}
+
+.button-text{
+
+    color: #fff;
+    margin-left: 5px;
+}
+
+.feedback{
+    display: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+}
+
+.navbar{
+
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 30px;
+    padding-top: 50px;
+}
+
+nav{
+
+    flex: 1;
+    text-align: right;
+}
+
+nav ul{
+
+    display: inline-block;
+    list-style: none;
+}
+
+nav ul li{
+
+    display: inline-block;
+    margin-right: 50px;
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    font-family: sans-serif;
+}
+
+nav ul li button{
+
+    font-size:  20px;
+    color: white;
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+
+nav ul li button:hover
+{
+    color: aqua;
+}
+
+nav ul li a:hover
+{
+    color: aqua;
+}
+a
+{
+    text-decoration: none;
+    color: palevioletred;
+    font-size: 28px;
+}
+
+#login-form{
+
+    display: none;
+}
+
+.form-box{
+
+    width: 380px;
+    height: 300px;
+    position: relative;
+    margin: 2% auto;
+    background: rgba(0,0,0,0.3);
+    padding: 20px;
+    overflow: hidden;
+    margin-top:  0%;
+}
+
+.button-box{
+
+    width: 220px;
+    margin: 30px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px rgb(41, 119, 88);
+    border-radius: 30px;
+}
+
+.toggle-btn{
+
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+
+#btn{
+
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: turquoise;
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.input-group-login{
+
+    top: 150px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+
+.input-group-register{
+
+    top: 120px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+
+.inpunt-field{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+
+.submit-btn{
+
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: turquoise;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+.check-box{
+
+    margin: 20px 10px 34px 0;
+}
+
+span{
+
+    color: #777;
+    font-size: 12px;
+    bottom: 68px;
+    position: absolute;
+}
+
+#login{
+
+    left: 50px;
+}
+
+#login input{
+
+    color: black;
+    font-size: 15;
+}
+
+#register{
+
+    left: 450px;
+}
+
+#register input{
+
+    color: black;
+    font-size: 15;
+}
